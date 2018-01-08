@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Open Weather Map Client</string>
+    <string name="app_launcher_display_name">Weather Client Sungjin Lee</string>
+    <string name="humidity_label">Humidity:</string>
+    <string name="wind_speed_label">Wind Speed:</string>
+    <string name="wind_gust_label">Wind Gust:</string>
+    <string name="wind_direction_label">Wind Direction:</string>
+    <string name="location_name_label">Location Name:</string>
+    <string name="get_weather_button">Get Weather</string>
+    <string name="default_location">New York</string>
+    <string name="edit_text_hint">Location</string>
+    <string name="weather_icon_desc">Weather icon</string>
+    <string name="arrow_up_desc">Max temperature</string>
+    <string name="arrow_down_desc">Min temperature</string>
+</resources>

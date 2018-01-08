@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="com.sungjinlee.weatherapiclient.weather.WeatherActivity">
+
+    <TextView
+        android:id="@+id/currentTemp"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart= "@dimen/default_margin"
+        android:layout_marginLeft= "@dimen/default_margin"
+        android:layout_marginTop= "@dimen/default_margin"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/weather_data_text"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrow_up"
+        android:layout_width="@dimen/default_margin"
+        android:layout_height="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:src="@drawable/arrow_up"
+        android:contentDescription="@string/arrow_up_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/maxMinTemp" />
+
+    <TextView
+        android:id="@+id/maxMinTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/double_margin"
+        android:layout_marginLeft="@dimen/double_margin"
+        android:layout_marginTop="@dimen/half_margin"
+        android:text=""
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentTemp" />
+
+    <ImageView
+        android:id="@+id/arrow_down"
+        android:layout_width="@dimen/default_margin"
+        android:layout_height="@dimen/default_margin"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/arrow_down"
+        android:contentDescription="@string/arrow_down_desc"
+        app:layout_constraintStart_toEndOf="@+id/maxMinTemp"
+        app:layout_constraintTop_toTopOf="@+id/maxMinTemp" />
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="@dimen/weather_icon_size"
+        android:layout_height="@dimen/weather_icon_size"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/half_margin"
+        android:layout_weight="1"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/weather_icon_desc"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/arrow_down"
+        app:layout_constraintTop_toTopOf="@+id/currentTemp" />
+
+    <TextView
+        android:id="@+id/currentConditionsDesc"
+        android:layout_width="150dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/half_margin"
+        android:text=""
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxMinTemp" />
+
+    <TextView
+        android:id="@+id/humidity_label"
+        android:layout_width="100dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/double_margin"
+        android:text="@string/humidity_label"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentConditionsDesc" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/double_margin"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/humidity_label"
+        app:layout_constraintTop_toBottomOf="@+id/currentConditionsDesc" />
+
+    <TextView
+        android:id="@+id/windSpeed_label"
+        android:layout_width="100dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="8dp"
+        android:text="@string/wind_speed_label"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidity_label" />
+
+    <TextView
+        android:id="@+id/windSpeed"
+        android:layout_width="150dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/windSpeed_label"
+        app:layout_constraintTop_toTopOf="@+id/windSpeed_label" />
+
+    <TextView
+        android:id="@+id/windGust"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/windDirection_label"
+        android:layout_width="100dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/half_margin"
+        android:text="@string/wind_direction_label"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeed_label" />
+
+    <TextView
+        android:id="@+id/windDirection"
+        android:layout_width="150dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/windDirection_label"
+        app:layout_constraintTop_toTopOf="@+id/windDirection_label" />
+
+    <TextView
+        android:id="@+id/locationNameLabel"
+        android:layout_width="100dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/double_margin"
+        android:layout_weight="1"
+        android:text="@string/location_name_label"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windDirection" />
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="187dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:hint="@string/edit_text_hint"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:text="@string/default_location"
+        android:textCursorDrawable="@drawable/custom_edit_text_cursor"
+        app:layout_constraintStart_toEndOf="@+id/locationNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/windDirection" />
+
+    <Button
+        android:id="@+id/getWeather"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/get_weather_button"
+        android:textAllCaps="false"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationNameLabel" />
+
+</android.support.constraint.ConstraintLayout>
