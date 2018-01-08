@@ -2,7 +2,7 @@
 
 ## Weather API
 - [Open Weather Map](https://openweathermap.org/api)
-- Put your API key at com.sungjinlee.weatherapiclient.data.source.OpenWeatherMapClient.
+- Put your API key at com.sungjinlee.weatherapiclient.data.source.OpenWeatherMapClient.java.
 
 ## Dependencies 
 - [Dagger2](https://google.github.io/dagger/) for dependency injection.
