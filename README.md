@@ -1,6 +1,6 @@
 # Weather API Client
 
-## Weather Data server
+## Weather OPEN API
 - [Open Weather Map](https://openweathermap.org/api)
 - Put your API key at com.sungjinlee.weatherapiclient.data.source.OpenWeatherMapClient.
 
