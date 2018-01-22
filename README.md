@@ -5,7 +5,7 @@
 - Put your API key at com.sungjinlee.weatherapiclient.data.source.OpenWeatherMapClient.java.
 
 ## Dependencies 
-- [Dagger2](https://google.github.io/dagger/) for dependency injection.
+- [Dagger 2](https://google.github.io/dagger/) for dependency injection.
 - [Retrofit 2](http://square.github.io/retrofit/) for networking.
 - [ButterKnife](http://jakewharton.github.io/butterknife/) for binding views.
 ## Architectural pattern 
